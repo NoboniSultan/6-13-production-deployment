@@ -1,0 +1,10 @@
+SESSION_SECRET='dwoufvboqehvfrbouqfghbv339b'
+require('dotenv').config()
+console.log(process.env)
+const config = (
+    host: process.env.PGHOST,
+    port: process.env.
+    database: process.env
+)
+# When deploying, set this to your hosted database URL instead of the vars above
+PG_CONNECTION_STRING=

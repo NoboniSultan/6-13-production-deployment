@@ -1,7 +1,7 @@
 // ====================================
 // Imports / Constants
 // ====================================
-
+require('dotenv').config()
 const path = require('path');
 const express = require('express');
 
@@ -28,7 +28,7 @@ app.use(logRoutes);
 // ⚠️ Secret is hardcoded for development only — move to .env before deploying
 app.use(cookieSession({
   name: 'session',
-  secret: 'dev-only-secret-replace-before-deploying',
+  secret: 'process.env.SESSION_SECRET',
   maxAge: 24 * 60 * 60 * 1000,
 }));
 app.use(express.json());
